@@ -1,0 +1,269 @@
+.info-row-container {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.info-row-container .row-inner-element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.col-1 {
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 50px;
+}
+
+.col-1 h2 {
+  font-size: 54px;
+  font-family: "Poppins", sans-serif;
+}
+
+.col-1 h3 {
+  font-size: 30px;
+  color: #707070;
+  font-weight: 100;
+  margin: 20px 0 10px;
+  font-family: "Heebo", sans-serif;
+}
+
+.col-1 p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
+  font-family: "Heebo", sans-serif;
+}
+
+.col-1::after {
+  content: "";
+  width: 10px;
+  height: 57%;
+  background: linear-gradient(#000024, #ffffff);
+  position: absolute;
+  left: -40px;
+  top: 8px;
+}
+
+.col-2 {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.col-2 .subs-icon {
+  width: 85%;
+}
+
+.info-sign-up-btn {
+  width: 143px;
+  border: 0;
+  padding: 12px 10px;
+  outline: none;
+  color: #ffffff;
+  background: #000024;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: width 0.6s;
+  font-family: "Poppins", sans-serif;
+}
+
+.info-sign-up-btn img {
+  width: 17px;
+  display: none;
+}
+
+.info-sign-up-btn:hover img {
+  display: block;
+}
+
+.info-sign-up-btn:hover {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 8%;
+  position: relative;
+}
+
+.slide_control {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  justify-content: space-between;
+}
+
+.slide_control button {
+  pointer-events: all;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform 120ms linear;
+}
+
+.slide_control button:hover {
+  transform: scale(1.2);
+}
+
+.slide_inner {
+  overflow-x: scroll;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 1rem;
+}
+
+.recommend-storie_card {
+  flex-shrink: 0;
+  cursor: pointer;
+  /* calc by max-width of .slide_inner divide by three */
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend-storie_image-wrapper {
+  width: 100%;
+  background-color: lightgray;
+}
+
+.recommend-storie_image {
+  display: block;
+  background-color: #3775cf;
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+
+.recommend-storie_content {
+  padding: 1rem;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.recommend-storie_title {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.recommend-storie_paragraph {
+  color: black;
+  font-size: 0.875rem;
+}
+
+.other-storie_wrapper {
+  border-top: 1px solid lightgray;
+  grid-area: other-storie;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 1rem 8%;
+}
+
+.other-storie_card:not(:first-of-type) {
+  border-left: 1px solid lightgray;
+}
+
+.other-storie_title {
+  font-family: "Poppins", sans-serif;
+}
+
+.other-storie_paragraph {
+  text-align: justify;
+  font-family: "Heebo", sans-serif;
+}
+
+.other-storie_card {
+  padding: 1rem;
+}
+
+.other-storie_content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.other-storie_card b {
+  font-family: "Poppins", sans-serif;
+}
+
+@media only screen and (max-width: 640px) {
+  .slide_inner {
+    padding-left: 0.6rem;
+  }
+  .slide_control button {
+    transform: scale(1.5);
+  }
+  .slide_control button:hover {
+    transform: scale(1.8);
+  }
+  .other-storie_wrapper {
+    grid-template-columns: 1fr;
+  }
+  .other-storie_card {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .other-storie_card:not(:first-child) {
+    border-top: 1px solid lightgray;
+    border-left: unset;
+  }
+  .row-inner-element {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+  .col-2 {
+    flex-basis: 100;
+    margin-bottom: 50px;
+  }
+  .col-2 .subs-icon {
+    width: 100%;
+  }
+  .color-box {
+    border-radius: 0 0 0 30px;
+    height: 100%;
+    width: 35%;
+    transform: translateX(75px);
+  }
+  .rates-btn img {
+    width: 25px;
+    margin-bottom: 3px;
+  }
+  .rates-btn {
+    font-size: smaller;
+    text-align: center;
+    margin: 50px 35px 35px 0;
+  }
+  .col-1 {
+    flex-basis: 100%;
+  }
+  .col-1 h2 {
+    font-size: 25px;
+  }
+  .col-1 h3 {
+    font-size: 15px;
+  }
+  .other-storie_title {
+    font-size: large;
+  }
+}

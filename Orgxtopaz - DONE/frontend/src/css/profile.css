@@ -1,0 +1,101 @@
+.user-container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.user-inner-element {
+  max-width: 700px;
+  width: 100%;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.user-title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.user-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(rgba(253, 29, 29, 1), rgba(252, 176, 69, 1));
+}
+
+form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+
+form .user-details .personal-info-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.user-details .personal-info-box .personal-details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-family: "Heebo", sans-serif;
+}
+
+.user-details .personal-info-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.6s ease;
+  font-family: "Heebo", sans-serif;
+}
+
+form .user-button {
+  height: 45px;
+  width: 45px 0;
+}
+
+form .user-button input {
+  height: 100%;
+  width: 100%;
+  color: #000;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  border-style: solid;
+}
+
+form .user-button input:hover {
+  color: #ffffff;
+  background-color: #000024;
+}
+
+@media (max-width: 584px) {
+  .user-inner-element {
+    max-width: 100%;
+  }
+  form .user-details .personal-info-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
